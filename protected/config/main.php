@@ -49,13 +49,7 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=yii_csms',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'Z7z9XL0gVV9mf2',
-			'charset' => 'utf8',
-		),
+		'db'=> require(dirname(__FILE__) . '/db.php'),
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
