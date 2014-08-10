@@ -15,7 +15,7 @@
 
     <!-- Custom styles for this template -->
     <!-- <link href="navbar-static-top.css" rel="stylesheet"> -->
-    <link href="/css/navbar-static-top.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
