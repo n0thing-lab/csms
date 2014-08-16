@@ -11,6 +11,9 @@
     <!-- Bootstrap core CSS -->
     <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
     
 
     <!-- Custom styles for this template -->
@@ -25,6 +28,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
     <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/jquery.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -79,10 +83,7 @@
 
     <div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
         <?php echo $content; ?>
-      </div>
 
     </div> <!-- /container -->
 
@@ -90,7 +91,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery.min.js"></script>
+    
     <script src="/js/bootstrap.min.js"></script>
   
 
