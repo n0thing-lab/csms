@@ -6,9 +6,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-</ol>
+
 
 <h1><?=$this->pageTitle?></h1>
 
