@@ -3,17 +3,17 @@
 <?php $this->beginContent('//layouts/main'); ?>
 
 <div id="content">
+    <?php if (isset($this->breadcrumbs)): ?>
     <ol class="breadcrumb">
-    <?php
-        if (isset($this->breadcrumbs))
-        {
-            foreach ($this->breadcrumbs as $value)
-    ?>
+    <li><a href="#">
+        <i class="fa fa-home"></i>
+    </a></li>
+    <?php foreach ($this->breadcrumbs as $value): ?>
             <li><a href="#"><?=$value?></a></li>
-    <?php
-        }
-    ?>
+        <?php endforeach; ?>
     </ol>
+    <?php endif; ?>
+
 	<?php echo $content; ?>
 </div><!-- content -->
 <?php $this->endContent(); ?>

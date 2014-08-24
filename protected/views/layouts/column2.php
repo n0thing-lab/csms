@@ -1,17 +1,13 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 
+<?php if (isset($this->breadcrumbs)): ?>
     <ol class="breadcrumb">
-        <?php
-        if (isset($this->breadcrumbs))
-        {
-            foreach ($this->breadcrumbs as $value)
-                ?>
-                <li><a href="#"><?=$value?></a></li>
-        <?php
-        }
-        ?>
+        <?php foreach ($this->breadcrumbs as $value): ?>
+            <li><a href="#"><?=$value?></a></li>
+        <?php endforeach; ?>
     </ol>
+<?php endif; ?>
 
 <div class="span-19">
 	<div id="content">
