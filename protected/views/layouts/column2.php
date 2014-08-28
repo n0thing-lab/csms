@@ -32,5 +32,5 @@
 		?>
 		</div><!-- sidebar -->
 	</div>
-	<?php $this->endContent(); ?>
 </div>
+	<?php $this->endContent(); ?>
