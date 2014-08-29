@@ -3,6 +3,9 @@
 	<?php $this->beginContent('//layouts/main'); ?>
 <div class="row">
 	<div class="col-md-3">
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="/categoryAdmin/manage">Категории</a></li>
+		</ul>
 		<div id="sidebar">
 		<?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
