@@ -7,6 +7,12 @@ class CategoryController extends AdminController
 		$this->render('index');
 	}
 
+    public function actionView($id)
+    {
+        $model = Category::model()->findByPk($id);
+        $this->render('view',array("model"=>$model));
+    }
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
@@ -33,4 +39,5 @@ class CategoryController extends AdminController
 		);
 	}
 	*/
+
 }

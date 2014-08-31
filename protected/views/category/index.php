@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
         $categories = Category::model()->findAll();
     foreach ($categories as $category): ?>
         <div class="col-md-3">
-            <a href="#<?=$category->id?>" class="thumbnail">
+            <a href="/category/view/id/<?=$category->id?>" class="thumbnail">
                 <img style="width:200px; height:200px">
                 <h4 class="text-center"><?=$category->name?></h4>
             </a>

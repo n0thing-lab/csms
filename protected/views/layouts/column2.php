@@ -4,7 +4,7 @@
 <div class="row">
 	<div class="col-md-3">
 		<ul class="nav nav-pills nav-stacked">
-			<li class="active"><a href="index.php?r=categoryAdmin/index">Категории</a></li>
+			<li class="active"><a href="/categoryAdmin/index">Категории</a></li>
 		</ul>
 		<div id="sidebar">
 		<?php
@@ -23,7 +23,7 @@
 		<div id="content">
 			<?php if (isset($this->breadcrumbs)): ?>
 				<ol class="breadcrumb">
-					<li><a href="#">
+					<li><a href="/">
 							<i class="fa fa-home"></i>
 						</a></li>
 					<?php foreach ($this->breadcrumbs as $value): ?>
