@@ -21,7 +21,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parent'); ?>
-		<?php echo $form->textField($model,'parent'); ?>
+		<?php echo $form->dropDownList($model, 'parent', CHtml::listData(Category::model()->findAll(), 'id', 'name'), array('prompt' =>'Выберите категорию')); ?>
 		<?php echo $form->error($model,'parent'); ?>
 	</div>
 

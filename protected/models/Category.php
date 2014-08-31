@@ -28,9 +28,12 @@ class Category extends CActiveRecord
 		return array(
 			array('parent', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
+
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, parent, name', 'safe', 'on'=>'search'),
+			array('name', 'required'),
 		);
 	}
 
