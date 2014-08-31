@@ -1,18 +1,8 @@
-<?php
-/* @var $this CategoryController */
-
-$this->breadcrumbs=array(
-	'Category',
-);
-?>
-
-
-
 <h1><?=$this->pageTitle?></h1>
 
 <div class="row" style="width:100%; min-height: 270px;">
 	<div class="add-button col-md-3 text-center">
-		<a href="#" class="text-success">
+		<a href="/categoryAdmin/create" class="text-success">
 			<i class="fa fa-plus-square fa-5x"></i>
 		</a>
 	</div>

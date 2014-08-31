@@ -1,6 +1,6 @@
 <?php
 
-class CategoryController extends AdminController
+class CategoryController extends Controller
 {
 	public function actionIndex()
 	{

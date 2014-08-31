@@ -1,12 +1,9 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: paul
- * Date: 31.08.14
- * Time: 17:34
- * To change this template use File | Settings | File Templates.
- */
+/* @var $this CategoryController */
 
+$this->breadcrumbs=array(
+    'Category'=> 'asd',
+);
 ?>
 
 <h1>Category - <?=$model->name?></h1>
