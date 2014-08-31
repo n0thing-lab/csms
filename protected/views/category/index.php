@@ -17,7 +17,7 @@ $this->breadcrumbs=array(
 		</a>
 	</div>
     <?php
-        $categories = Category::model()->findAll();
+        $categories = Category::model()->findAllByAttributes(array('parent'=>null));
     foreach ($categories as $category): ?>
         <div class="col-md-3">
             <a href="/category/view/id/<?=$category->id?>" class="thumbnail">
