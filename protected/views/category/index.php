@@ -16,24 +16,34 @@ $this->breadcrumbs=array(
 			<i class="fa fa-plus-square fa-5x"></i>
 		</a>
 	</div>
-	<div class="col-md-3">
-		<a href="#" class="thumbnail">
-			<img style="width:200px; height:200px">
-			<h4 class="text-center">blabla</h4>
-		</a>
-	</div>
-	<div class="col-md-3">
-		<a href="#" class="thumbnail">
-			<img style="width:200px; height:200px">
-			<h4 class="text-center">blabla1</h4>
-		</a>
-	</div>
-	<div class="col-md-3">
-		<a href="#" class="thumbnail">
-			<img style="width:200px; height:200px">
-			<h4 class="text-center">blabla2</h4>
-		</a>
-	</div>
+    <?php
+        $categories = Category::model()->findAll();
+    foreach ($categories as $category): ?>
+        <div class="col-md-3">
+            <a href="#<?=$category->id?>" class="thumbnail">
+                <img style="width:200px; height:200px">
+                <h4 class="text-center"><?=$category->name?></h4>
+            </a>
+        </div>
+    <?php endforeach;?>
+    <div class="col-md-3">
+        <a href="#" class="thumbnail">
+            <img style="width:200px; height:200px">
+            <h4 class="text-center">da</h4>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="#" class="thumbnail">
+            <img style="width:200px; height:200px">
+            <h4 class="text-center">da</h4>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="#" class="thumbnail">
+            <img style="width:200px; height:200px">
+            <h4 class="text-center">da</h4>
+        </a>
+    </div>
 </div>
 
 <script>
