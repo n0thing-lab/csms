@@ -5,6 +5,7 @@
 	<div class="col-md-3">
 		<ul class="nav nav-pills nav-stacked">
 			<li class="active"><a href="/categoryAdmin/index">Категории</a></li>
+			<li><a href="/Document/index">Документы</a></li>
 		</ul>
 		<div id="sidebar">
 		<?php
