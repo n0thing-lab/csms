@@ -14,7 +14,9 @@ class CategoryController extends Controller
             throw new CHttpException(404, "Not found");
 
         $categories = Category::model()->findAllByAttributes(array('parent'=>$model->id));
-        $this->render('view',array("model"=>$model, "categories"=>$categories));
+
+	    $documents = Document::model()->findAllByAttributes(array('category_id'=>$model->id));
+        $this->render('view',array("model"=>$model, "categories"=>$categories, "documents"=>$documents));
     }
 
 	// Uncomment the following methods and override them if needed
