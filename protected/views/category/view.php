@@ -6,8 +6,8 @@ $this->breadcrumbs=array(
 );
 ?>
 
+<div class="row">
 <h1>Category - <?=$model->name?></h1>
-
 <?php
 foreach ($categories as $category): ?>
     <div class="col-md-3">
@@ -16,12 +16,23 @@ foreach ($categories as $category): ?>
             <h4 class="text-center"><?=$category->name?></h4>
         </a>
     </div>
-<?php endforeach;
-foreach ($documents as $document): ?>
-<div class="col-md-3">
-	<a href="/documentAdmin/view/id/<?=$document->id?>" class="thumbnail">
-		<img style="width:200px; height:200px">
-		<h4 class="text-center"><?=$document->name?> - это документ</h4>
-	</a>
+<?php endforeach; ?>
 </div>
-<?php endforeach;?>
+
+<div class="row">
+<h1> Документы по категории - <?=$model->name?></h1>
+<?php
+	$docs = new Document;
+	$docs->category_id = $model->id;
+
+	$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $docs->search(),
+    'filter' => $docs,
+	'itemsCssClass'=>'table table-bordered',
+	'columns'=>array(
+		'id',
+		'name',
+		'year',
+	),
+)); ?>
+</div>

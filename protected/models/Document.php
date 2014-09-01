@@ -52,10 +52,10 @@ class Document extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
+			'id' => '#',
+			'name' => 'Название',
 			'category_id' => 'Category',
-			'year' => 'Year',
+			'year' => 'Год',
 		);
 	}
 
