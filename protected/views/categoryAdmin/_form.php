@@ -19,11 +19,21 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+    <div class="row">
+        <?php
+        $this->widget('ext.yii-image-attachment.ImageAttachmentWidget', array(
+        'model' => $model,
+        'behaviorName' => 'cover',
+        'apiRoute' => 'categoryAdmin/saveImageAttachment',
+        ));
+        ?>
+    </div>
+
 	<div class="row">
-		<?php echo $form->labelEx($model,'parent'); ?>
-		<?php echo $form->dropDownList($model, 'parent', CHtml::listData(Category::model()->findAll(), 'id', 'name'), array('prompt' =>'Выберите категорию')); ?>
-		<?php echo $form->error($model,'parent'); ?>
-	</div>
+        <?php echo $form->labelEx($model,'parent'); ?>
+        <?php echo $form->dropDownList($model, 'parent', CHtml::listData(Category::model()->findAll(), 'id', 'name'), array('prompt' =>'Выберите категорию')); ?>
+        <?php echo $form->error($model,'parent'); ?>
+    </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>

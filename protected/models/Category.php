@@ -37,6 +37,30 @@ class Category extends CActiveRecord
 		);
 	}
 
+    public function behaviors()
+    {
+        return array(
+            'cover' => array(
+                'class' => 'ext.yii-image-attachment.ImageAttachmentBehavior',
+                // size for image preview in widget
+                'previewHeight' => 200,
+                'previewWidth' => 300,
+                // extension for image saving, can be also tiff, png or gif
+                'extension' => 'jpg',
+                // folder to store images
+                'directory' => Yii::getPathOfAlias('webroot').'/uploads/categories',
+                // url for images folder
+                'url' => Yii::app()->request->baseUrl . '/uploads/categories',
+                // image versions
+                'versions' => array(
+                    'medium' => array(
+                        'resize' => array(200, 200),
+                    ),
+                )
+            )
+        );
+    }
+
 	/**
 	 * @return array relational rules.
 	 */

@@ -8,6 +8,13 @@ class CategoryAdminController extends AdminController
 	 */
 	public $layout='//layouts/column2';
 
+    public function actions()
+    {
+        return array(
+            'saveImageAttachment' => 'ext.yii-image-attachment.ImageAttachmentAction',
+        );
+    }
+
 	/**
 	 * @return array action filters
 	 */

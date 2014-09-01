@@ -32,6 +32,13 @@ return array(
 
 	// application components
 	'components'=>array(
+        'image'=>array(
+            'class'=>'application.extensions.yii-image.CImageComponent',
+            // GD or ImageMagick
+            'driver'=>'GD',
+            // ImageMagick setup path
+            //'params'=>array('directory'=>'D:/Program Files/ImageMagick-6.4.8-Q16'),
+        ),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
