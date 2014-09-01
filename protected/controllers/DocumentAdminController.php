@@ -1,6 +1,6 @@
 <?php
 
-class DocumentController extends AdminController
+class DocumentAdminController extends AdminController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -166,7 +166,7 @@ class DocumentController extends AdminController
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='document-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='documentAdmin-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

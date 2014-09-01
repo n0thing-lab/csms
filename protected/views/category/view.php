@@ -19,7 +19,7 @@ foreach ($categories as $category): ?>
 <?php endforeach;
 foreach ($documents as $document): ?>
 <div class="col-md-3">
-	<a href="/document/view/id/<?=$document->id?>" class="thumbnail">
+	<a href="/documentAdmin/view/id/<?=$document->id?>" class="thumbnail">
 		<img style="width:200px; height:200px">
 		<h4 class="text-center"><?=$document->name?> - это документ</h4>
 	</a>
