@@ -11,6 +11,7 @@
  */
 class Document extends CActiveRecord
 {
+	public $category_id1;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -27,7 +28,7 @@ class Document extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('category_id, year', 'numerical', 'integerOnly'=>true),
+			array('category_id, category_id1, year', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

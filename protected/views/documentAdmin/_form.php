@@ -27,8 +27,36 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'category_id'); ?>
-		<?php echo $form->dropDownList($model, 'category_id', CHtml::listData(Category::model()->findAll(), 'id', 'name'), array('prompt' =>'Выберите категорию')); ?>
+		<?php echo $form->dropDownList($model, 'category_id', CHtml::listData(Category::model()->findAll(), 'id', 'name'), array(
+			'prompt' =>'Выберите категорию',
+			'ajax' => array(
+				'type'=>'POST', //request type
+				'url'=>CController::createUrl('documentAdmin/dynamicCategories'),
+				'data'=>array('id'=>'js:this.value'),
+				'update'=>'.secondDropdown',
+			),
+	));
+		?>
 		<?php echo $form->error($model,'category_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php
+			$data = array();
+			if(isset($model->category_id) && !empty($model->category_id)){
+				$lol = Category::model()->findByPk($model->category_id);
+				$param = $lol->id;
+				if(isset($lol->parent) && !empty($lol->parent)){
+					$param = $lol->parent;
+					$model->category_id1 = $lol->id;
+				}
+				$data = CHtml::listData(Category::model()->findAllByAttributes(array('parent'=>$param)), 'id', 'name');
+			}
+			var_dump($model->category_id1);
+			echo $form->labelEx($model,'parent');
+			echo $form->dropDownList($model, 'category_id1', $data, array('class'=>'secondDropdown', 'prompt' =>'Выберите подкатегорию'));
+
+		?>
 	</div>
 
 	<div class="row">
