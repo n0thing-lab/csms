@@ -11,7 +11,12 @@
     foreach ($categories as $category): ?>
         <div class="col-md-3">
             <a href="/category/view/id/<?=$category->id?>" class="thumbnail">
-                <img style="width:200px; height:200px">
+
+                <?php
+                if($category->cover->hasImage())
+                echo CHtml::image($category->cover->getUrl('medium'),'Medium image version');
+                else
+                    echo '<img style="width:200px; height:200px">';?>
                 <h4 class="text-center"><?=$category->name?></h4>
             </a>
         </div>
