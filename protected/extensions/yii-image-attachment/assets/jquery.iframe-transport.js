@@ -49,7 +49,7 @@
 // detection provided by jQuery as with regular XHR. If you can't set the
 // expected response data type (for example because it may vary depending on
 // the outcome of processing by the server), you will need to employ a
-// workaround on the server side: Send back an HTML document containing just a
+// workaround on the server side: Send back an HTML documentAdmin containing just a
 // `<textarea>` element with a `data-type` attribute that specifies the MIME
 // type, and put the actual payload in the textarea:
 
@@ -153,7 +153,7 @@
                 appendTo(form);
 
             // Move the file fields into the hidden form, but first remember their
-            // original locations in the document by replacing them with disabled
+            // original locations in the documentAdmin by replacing them with disabled
             // clones. This should also avoid introducing unwanted changes to the
             // page layout during submission.
             markers = files.after(function(idx) {

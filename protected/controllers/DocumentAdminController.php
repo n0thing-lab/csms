@@ -1,6 +1,6 @@
 <?php
 
-class DocumentController extends AdminController
+class DocumentAdminController extends AdminController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -72,6 +72,8 @@ class DocumentController extends AdminController
 		if(isset($_POST['Document']))
 		{
 			$model->attributes=$_POST['Document'];
+			if(isset($model->category_id1) && !empty($model->category_id1))
+				$model->category_id = $model->category_id1;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -96,6 +98,8 @@ class DocumentController extends AdminController
 		if(isset($_POST['Document']))
 		{
 			$model->attributes=$_POST['Document'];
+			if(isset($model->category_id1) && !empty($model->category_id1))
+				$model->category_id = $model->category_id1;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -166,10 +170,23 @@ class DocumentController extends AdminController
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='document-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='documentAdmin-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+
+	public function actionDynamicCategories()
+	{
+		$data = Category::model()->findAllByAttributes(array('parent'=>(int) $_POST['id']));
+
+		$data=CHtml::listData($data,'id','name');
+		echo CHtml::tag('option', array('value'=>''),CHtml::encode('Выберите подкатегорию'),true);
+
+		foreach($data as $value=>$name)
+		{
+			echo CHtml::tag('option', array('value'=>$value),CHtml::encode($name),true);
 		}
 	}
 }
