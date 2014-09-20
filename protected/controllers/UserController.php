@@ -7,6 +7,13 @@ class UserController extends Controller
 		$this->render('index');
 	}
 
+
+	public function actionLogin()
+	{
+        $this->layout = '//layouts/login';
+        $this->render('login');
+	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
