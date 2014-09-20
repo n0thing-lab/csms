@@ -55,7 +55,7 @@ class Category extends CActiveRecord
                 'versions' => array(
                     'medium' => array(
                         'resize' => array(200, 200, Image::AUTO),
-                        //'crop' => array(200, 200, 'center', 'center'),
+                        'crop' => array(200, 200, 'center', 'center'),
                     ),
                 )
             )
