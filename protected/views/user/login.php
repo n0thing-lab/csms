@@ -12,11 +12,14 @@
 
 
 <form class="form-signin" role="form">
-    <h2 class="form-signin-heading">Вход</h2>
+    <h2 class="form-signin-heading text-center">Вход</h2>
     <input type="email" class="form-control" placeholder="Почта" required="" autofocus="">
     <input type="password" class="form-control" placeholder="Пароль" required="">
-    <label class="checkbox">
-        <input type="checkbox" value="remember-me"> Запомнить меня
-    </label>
+    <div class="checkbox">
+        <label class="checkbox text-center">
+            <input type="checkbox" value="remember-me"> Запомнить меня
+        </label>
+    </div>
+
     <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
 </form>
