@@ -20,6 +20,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 		<div class="form-group">
+            <?php echo $form->labelEx($model,'coverLabel', array('class'=>"col-sm-2 control-label")); ?>
 			<div class="col-sm-10">
 			<?php
 				$this->widget('ext.yii-image-attachment.ImageAttachmentWidget', array(

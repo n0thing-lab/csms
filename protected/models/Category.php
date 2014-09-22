@@ -10,6 +10,7 @@
  */
 class Category extends CActiveRecord
 {
+    public $coverLabel;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -82,6 +83,7 @@ class Category extends CActiveRecord
 			'id' => 'ID',
 			'parent' => 'Parent',
 			'name' => 'Name',
+            'coverLabel' => 'Cover',
 		);
 	}
 
