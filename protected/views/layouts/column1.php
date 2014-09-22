@@ -5,7 +5,7 @@
 <div id="content">
     <?php if (isset($this->breadcrumbs)): ?>
     <ol class="breadcrumb">
-    <li><a href="#">
+    <li><a href="/">
         <i class="fa fa-home"></i>
     </a></li>
     <?php foreach ($this->breadcrumbs as $value): ?>

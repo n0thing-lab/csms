@@ -19,6 +19,7 @@
         ),
     )); ?>
 
+<<<<<<< HEAD
     <h2 class="form-signin-heading">Вход</h2>
     <div class="row">
         <?php echo $form->textField($model,'username', array(
@@ -78,4 +79,17 @@
 
     <?php $this->endWidget(); ?>
 
+=======
+<form class="form-signin" role="form">
+    <h2 class="form-signin-heading text-center">Вход</h2>
+    <input type="email" class="form-control" placeholder="Почта" required="" autofocus="">
+    <input type="password" class="form-control" placeholder="Пароль" required="">
+    <div class="checkbox">
+        <label class="checkbox text-center">
+            <input type="checkbox" value="remember-me"> Запомнить меня
+        </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+>>>>>>> 453c6f51432a93740af7d4a41e066a525e157a60
 </form>
