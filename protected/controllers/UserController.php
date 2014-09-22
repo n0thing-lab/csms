@@ -10,8 +10,15 @@ class UserController extends Controller
 
 	public function actionLogin()
 	{
+        $model = new LoginForm();
+
+        if (isset($_POST['LoginForm']))
+        {
+            $model->attributes = $_POST['LoginForm'];
+        }
+
         $this->layout = '//layouts/login';
-        $this->render('login');
+        $this->render('login', array('model'=>$model));
 	}
 
 	// Uncomment the following methods and override them if needed
