@@ -3,9 +3,9 @@
 /* @var $model Document */
 
 $this->breadcrumbs=array(
-	'Documents'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
-	'Update',
+	'Documents'=>"index",
+	'Manage'=>$this->createUrl("documentAdmin/admin"),
+	$model->name=>$this->createUrl("documentAdmin/".$model->id),
 );
 
 $this->menu=array(

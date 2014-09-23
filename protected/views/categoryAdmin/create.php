@@ -3,8 +3,8 @@
 /* @var $model Category */
 
 $this->breadcrumbs=array(
-	'Categories'=>array('index'),
-	'Create',
+	'Categories'=>"index",
+	'Create'=>"",
 );
 
 $this->menu=array(
