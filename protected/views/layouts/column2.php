@@ -25,11 +25,12 @@
 		<div id="content">
 			<?php if (isset($this->breadcrumbs)): ?>
 				<ol class="breadcrumb">
-					<li><a href="/">
+					<li><a href="/site/admin">
 							<i class="fa fa-home"></i>
 						</a></li>
-					<?php foreach ($this->breadcrumbs as $value): ?>
-						<li><a href="#"><?php $value?></a></li>
+					<?php foreach ($this->breadcrumbs as $key=>$value): ?>
+						<li><a href="<?=$value?>">
+								<?=$key?></a></li>
 					<?php endforeach; ?>
 				</ol>
 			<?php endif; ?>

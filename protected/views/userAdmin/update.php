@@ -3,9 +3,9 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
-	'Update',
+	'Users'=>"index",
+	'Manage'=>$this->createUrl("userAdmin/admin"),
+	$model->name=>$this->createUrl("userAdmin/".$model->id),
 );
 
 $this->menu=array(

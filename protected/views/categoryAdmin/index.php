@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Categories',
+	'Categories'=>"",
 );
 
 $this->menu=array(

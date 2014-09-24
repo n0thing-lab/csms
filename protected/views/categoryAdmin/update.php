@@ -3,9 +3,9 @@
 /* @var $model Category */
 
 $this->breadcrumbs=array(
-	'Categories'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
-	'Update',
+	'Categories'=>"index",
+	'Manage'=>$this->createUrl("categoryAdmin/admin"),
+	$model->name=>$this->createUrl("categoryAdmin/".$model->id),
 );
 
 $this->menu=array(

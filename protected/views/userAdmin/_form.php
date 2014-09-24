@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="form-horizontal">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
@@ -19,32 +19,42 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>250)); ?>
-		<?php echo $form->error($model,'name'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'name', array('class'=>"col-sm-2 control-label")); ?>
+		<div class="col-sm-10">
+			<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>250, 'class'=>"form-control")); ?>
+			<?php echo $form->error($model,'name'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'surname'); ?>
-		<?php echo $form->textField($model,'surname',array('size'=>60,'maxlength'=>250)); ?>
-		<?php echo $form->error($model,'surname'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'surname', array('class'=>"col-sm-2 control-label")); ?>
+		<div class="col-sm-10">
+			<?php echo $form->textField($model,'surname',array('size'=>60,'maxlength'=>250, 'class'=>"form-control")); ?>
+			<?php echo $form->error($model,'surname'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>250)); ?>
-		<?php echo $form->error($model,'email'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'email', array('class'=>"col-sm-2 control-label")); ?>
+		<div class="col-sm-10">
+			<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>250, 'class'=>"form-control")); ?>
+			<?php echo $form->error($model,'email'); ?>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>250)); ?>
-		<?php echo $form->error($model,'password'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'password', array('class'=>"col-sm-2 control-label")); ?>
+		<div class="col-sm-10">
+			<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>250, 'class'=>"form-control")); ?>
+			<?php echo $form->error($model,'password'); ?>
+		</div>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>"btn btn-default")); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>
