@@ -10,6 +10,8 @@ class UserController extends Controller
 
 	public function actionLogin()
 	{
+        var_dump(Yii::app()->user->isGuest);
+
         $model = new LoginForm();
 
         if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
@@ -41,6 +43,12 @@ class UserController extends Controller
 
         // collect user input data
 	}
+
+    public function actionLogout()
+    {
+        Yii::app()->user->logout();
+        $this->redirect("/");
+    }
 
 	// Uncomment the following methods and override them if needed
 	/*
