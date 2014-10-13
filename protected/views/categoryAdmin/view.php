@@ -3,12 +3,11 @@
 /* @var $model Category */
 
 $this->breadcrumbs=array(
-	'Categories'=>"index",
+	'Categories'=>"admin",
 	$model->name=>"",
 );
 
 $this->menu=array(
-	array('label'=>'List Category', 'url'=>array('index')),
 	array('label'=>'Create Category', 'url'=>array('create')),
 	array('label'=>'Update Category', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Category', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),

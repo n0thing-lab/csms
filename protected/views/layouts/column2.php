@@ -4,9 +4,9 @@
 <div class="row">
 	<div class="col-md-3">
 		<ul class="nav nav-pills nav-stacked">
-			<li class="<?=Yii::app()->controller->id=='categoryAdmin'? 'active' : ''?>"><a href="/categoryAdmin/index">Категории</a></li>
-			<li class="<?=Yii::app()->controller->id=='documentAdmin'? 'active' : ''?>"><a href="/documentAdmin/index">Документы</a>
-            <li class="<?=Yii::app()->controller->id=='userAdmin'? 'active' : ''?>"><a href="/userAdmin/index">Пользователи</a>
+			<li class="<?=Yii::app()->controller->id=='categoryAdmin'? 'active' : ''?>"><a href="/categoryAdmin/admin">Категории</a></li>
+			<li class="<?=Yii::app()->controller->id=='documentAdmin'? 'active' : ''?>"><a href="/documentAdmin/admin">Документы</a>
+            <li class="<?=Yii::app()->controller->id=='userAdmin'? 'active' : ''?>"><a href="/userAdmin/admin">Пользователи</a>
 		</ul>
 		<div id="sidebar">
 		<?php

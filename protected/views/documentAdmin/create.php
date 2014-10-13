@@ -3,12 +3,11 @@
 /* @var $model Document */
 
 $this->breadcrumbs=array(
-	'Documents'=>"index",
+	'Documents Manage'=>"admin",
 	'Create'=>"",
 );
 
 $this->menu=array(
-	array('label'=>'List Document', 'url'=>array('index')),
 	array('label'=>'Manage Document', 'url'=>array('admin')),
 );
 ?>

@@ -3,12 +3,11 @@
 /* @var $model Category */
 
 $this->breadcrumbs=array(
-	'Categories'=>"index",
+	'Categories Manage'=>"admin",
 	'Create'=>"",
 );
 
 $this->menu=array(
-	array('label'=>'List Category', 'url'=>array('index')),
 	array('label'=>'Manage Category', 'url'=>array('admin')),
 );
 ?>
