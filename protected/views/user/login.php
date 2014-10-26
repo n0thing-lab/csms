@@ -23,7 +23,7 @@
 
     <h2 class="form-signin-heading">Вход</h2>
     <div class="row">
-        <?php echo $form->emailField($model,'username', array(
+        <?php echo $form->textField($model,'username', array(
             'class'=>"form-control",
             'placeholder'=>"Почта",
             'required'=>"",

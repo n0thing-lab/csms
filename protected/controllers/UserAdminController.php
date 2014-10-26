@@ -71,6 +71,7 @@ class UserAdminController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
+            $model->password = CPasswordHelper::hashPassword($model->password);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -92,12 +93,18 @@ class UserAdminController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
+        //if ($_POST['password'] == '') unset($_POST['password']);
+
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
+            if ($_POST['User']['password'] !== '')
+                $model->password = CPasswordHelper::hashPassword($_POST['User']['password']);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
+
+        $model->password = '';
 
 		$this->render('update',array(
 			'model'=>$model,
